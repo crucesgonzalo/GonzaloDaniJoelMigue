@@ -12,12 +12,14 @@ insert into equipo values(2, 'Recrativo', 'Huelva', '64');
 insert into equipo values(3, 'Granada FC', 'Granada', '9');
 insert into equipo values(4, 'Cordoba FC', 'Córdoba', '12');
 
+
+//Este parrafo es editado por Daniel
 create table jugador (
   id_jugador int(11) NOT NULL,
   nombre varchar(45) DEFAULT NULL,
   apellido varchar(45) DEFAULT NULL,
   puesto varchar(45) DEFAULT NULL,
-  equipo int(11) DEFAULT NULL,
+  equipo int(11) DEFAULT BETIWENO,
   PRIMARY KEY (id_jugador),
   KEY fequipo (equipo),
   CONSTRAINT fequipo FOREIGN KEY (equipo) REFERENCES equipo (id_equipo) ON DELETE NO ACTION ON UPDATE NO ACTION
