@@ -7,10 +7,10 @@ create table equipo (
   UNIQUE KEY nombre_UNIQUE (nombre)
 );
 
-insert into equipo values(1, 'Equipo 1', 'Sevilla', '0');
-insert into equipo values(2, 'Equipo 2', 'Huelva', '0');
-insert into equipo values(3, 'Equipo 3', 'Granada', '0');
-insert into equipo values(4, 'Equipo 4', 'Córdoba', '0');
+insert into equipo values(1, 'Sevilla FC', 'Sevilla', '23');
+insert into equipo values(2, 'Recrativo', 'Huelva', '64');
+insert into equipo values(3, 'Granada FC', 'Granada', '9');
+insert into equipo values(4, 'Cordoba FC', 'Córdoba', '12');
 
 create table jugador (
   id_jugador int(11) NOT NULL,
