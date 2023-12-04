@@ -23,8 +23,11 @@ create table jugador (
   CONSTRAINT fequipo FOREIGN KEY (equipo) REFERENCES equipo (id_equipo) ON DELETE NO ACTION ON UPDATE NO ACTION
 );
 
+
+//Este parrafo es editado por miguel
 insert into jugador values(1, 'Nombre 1', 'Apellido 1', 'Delantero', 1);
 insert into jugador values(2, 'Nombre 2', 'Apellido 2', 'Portero', 1);
+insert into jugador values(2, 'Vinicius 2', 'Real Madrid 2', 'De Gea', 1);
 insert into jugador values(3, 'Nombre 3', 'Apellido 3', 'Delantero', 2);
 insert into jugador values(4, 'Nombre 4', 'Apellido 4', 'Portero', 2);
 
