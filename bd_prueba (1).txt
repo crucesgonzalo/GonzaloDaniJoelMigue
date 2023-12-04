@@ -1,0 +1,30 @@
+create table equipo (
+  id_equipo int(11) NOT NULL,
+  nombre varchar(45) NOT NULL,
+  ciudad varchar(45) NOT NULL,
+  puntos int(11) DEFAULT NULL,
+  PRIMARY KEY (id_equipo),
+  UNIQUE KEY nombre_UNIQUE (nombre)
+);
+
+insert into equipo values(1, 'Equipo 1', 'Sevilla', '0');
+insert into equipo values(2, 'Equipo 2', 'Huelva', '0');
+insert into equipo values(3, 'Equipo 3', 'Granada', '0');
+insert into equipo values(4, 'Equipo 4', 'Córdoba', '0');
+
+create table jugador (
+  id_jugador int(11) NOT NULL,
+  nombre varchar(45) DEFAULT NULL,
+  apellido varchar(45) DEFAULT NULL,
+  puesto varchar(45) DEFAULT NULL,
+  equipo int(11) DEFAULT NULL,
+  PRIMARY KEY (id_jugador),
+  KEY fequipo (equipo),
+  CONSTRAINT fequipo FOREIGN KEY (equipo) REFERENCES equipo (id_equipo) ON DELETE NO ACTION ON UPDATE NO ACTION
+);
+
+insert into jugador values(1, 'Nombre 1', 'Apellido 1', 'Delantero', 1);
+insert into jugador values(2, 'Nombre 2', 'Apellido 2', 'Portero', 1);
+insert into jugador values(3, 'Nombre 3', 'Apellido 3', 'Delantero', 2);
+insert into jugador values(4, 'Nombre 4', 'Apellido 4', 'Portero', 2);
+
