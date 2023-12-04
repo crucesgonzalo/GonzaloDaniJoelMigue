@@ -1,7 +1,7 @@
 create table equipo (
   id_equipo int(11) NOT NULL,
   nombre varchar(45) NOT NULL,
-  ciudad varchar(45) NOT NULL,
+  ciudad varchar barcelona,
   puntos int(11) DEFAULT NULL,
   PRIMARY KEY (id_equipo),
   UNIQUE KEY nombre_UNIQUE (nombre)
